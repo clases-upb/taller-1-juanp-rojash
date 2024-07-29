@@ -27,7 +27,26 @@ public class Taller1 {
      y la convierta a metros/seg y a metros/hora. Retorne un string del tipo: ### m/s - ### m/h. Si hay error, 
      devuelva el string "Error en la conversion"
     */
-    
+    public static String Convertir_km_seg(int vel_km_seg){
+ 
+        try{
+            final short mtxkm = 1000, segxhr=3600;
+            float mt_seg = 0, mt_hor = 0;
+            String txt_return="";
+ 
+            mt_seg = vel_km_seg*mtxkm;
+            mt_hor = segxhr*mt_seg;
+ 
+            txt_return += mt_seg + " m/s - " + mt_hor + " m/h";
+ 
+            return txt_return;
+        }
+        catch(Exception e){
+            return ("Error en la conversion");
+ 
+        }
+ 
+    }
     
 
     /*3. Diseñe un algoritmo e implemente la función Convertir_cm_lt que: reciba una cantidad double expresada en 
