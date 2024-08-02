@@ -54,8 +54,10 @@ class AppTest {
 
     @Test void t1_calcular_comustible(){
         Taller1 classUnderTest = new Taller1();
-        assertEquals(14.337502, classUnderTest.Calcular_combustible(638, 312, 1243, 220), 
-        "El total de combustible en tonealdas esperado es: 14.337502 para los kms de las siguiente cuatro rutas: 638, 312, 1243, 220");
+        assertEquals(14.337502, 
+        classUnderTest.Calcular_combustible(638, 312, 1243, 220), 
+        0.0001f, 
+        "El total de combustible en toneladas esperado es: 14.337502 para los kms de las siguientes cuatro rutas: 638, 312, 1243, 220");
     }
 
     @Test void t1_calcular_peso_luna(){
